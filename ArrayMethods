@@ -1,0 +1,77 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DailyCoding
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Declare An Array
+            int[] intArray = new int[5];
+            int[] intArray2 = new int[5] {5,2,3,4,1};
+
+            string[] stringArray = new string[5];
+            string[] stringArray2 = new string[5] { "My ", "Name ", "Is ", "Geoff ", "Bitch " };
+            
+            var numbers = new[] {3,5,7};
+            var strings = new string[] {"something", "like", "this",};
+            var strings2 = new string[] {"My name is Geoff, bitch" }; //23 char string
+
+            //Length
+            Console.WriteLine("Length of intArray2: "+ intArray2.Length);
+            Console.WriteLine("Length of stringArray2: "+ stringArray2.Length);
+            Console.WriteLine("Length of numbers: "+ numbers.Length);
+
+            //IndexOf()
+            int index1 = Array.IndexOf(intArray, 5);
+            Console.WriteLine("Index of 5 in intArray is: "+ index1);
+
+            int index2 = Array.IndexOf(stringArray2, "Geoff "); //note: return is int, not the string itself
+            Console.WriteLine("Index of Geoff in stringArray2 is: "+ index2);
+
+            var index3 = Array.IndexOf(numbers,7);
+            Console.WriteLine("Index of 7 in numbers is: "+ index3);
+
+            //Clear()
+            Array.Clear(stringArray2, 4, 1); //this will remove "bitch"
+            Console.Write("Effect of clear(string) ");
+            foreach (var n in stringArray2)
+                Console.Write(n);
+
+            //Copy()
+            int[] another = new int[4];
+            Array.Copy(intArray2, another, 4);
+
+            Console.WriteLine("Effect of copy() ");
+            foreach (var n in another)
+            {
+                Console.WriteLine(n);
+            }
+
+            //Sort()
+            Array.Sort(another);
+
+            Console.WriteLine("Effect of Sort() ");
+            foreach (var n in another)
+            {
+                Console.WriteLine(n);
+            }
+
+
+            //Reverse()
+            Array.Reverse(another);
+
+            Console.WriteLine("Effect of Reverse() ");
+            foreach (var n in another)
+            {
+                Console.WriteLine(n);
+            }
+
+            Console.ReadLine();
+        }
+    }
+}
