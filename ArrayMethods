@@ -1,3 +1,17 @@
+How to:
+
+Declare
+Length
+IndefOf
+Clear
+Copy
+Sort
+Reverse
+
+
+
+
+```C#
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -75,3 +89,4 @@ namespace DailyCoding
         }
     }
 }
+```
